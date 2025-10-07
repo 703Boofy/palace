@@ -157,11 +157,12 @@ footer a:hover {
 /* Contact Page Map */
 .map-container {
   width: 100%;
-  min-height: 400px;
+  min-height: 100%;
   border-radius: 10px;
   overflow: hidden;
   flex-grow: 1;
 }
+
 
 form {
   display: flex;
