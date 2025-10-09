@@ -6,18 +6,21 @@
   <title>The Palace Nightclub</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">The Palace</a>
+      <a class="navbar-brand" href="index.html"><img src="images/palace logo rectangle.png" alt="The Palace Logo" style="height: 50px;"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
           <li class="nav-item"><a class="nav-link" href="bottle-service.html">Bottle Service</a></li>
           <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
@@ -28,12 +31,16 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero text-center text-white d-flex flex-column justify-content-center align-items-center" style="height:100vh; background: url('hero-bg.jpg') no-repeat center center/cover;">
-    <h1 class="display-3 mb-4">Welcome to The Palace</h1>
-    <div class="d-flex gap-3">
-      <a href="#events" class="btn btn-primary btn-lg">View Events</a>
-      <a href="bottle-service.html" class="btn btn-warning btn-lg">Bottle Service</a>
-      <a href="menu.html" class="btn btn-success btn-lg">Menu</a>
+  <section class="hero text-center text-white d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <h1>Welcome to The Palace</h1>
+      <p class="hero-text">&nbsp; The Palace is Virginia's number one Latin nightlife destination. Located in Woodbridge, we offer top DJs, live music, and unforgettable events every weekend in the heart of the DMV. We feature three VIP areas, a lounge area, two dance floors, and ample parking.</p>
+      <div class="d-flex gap-3 justify-content-center">
+        <a href="#events" class="btn btn-primary btn-lg">VIEW EVENTS</a>
+        <a href="bottle-service.html" class="btn btn-warning btn-lg">BOTTLE SERVICE</a>
+        <a href="menu.html" class="btn btn-success btn-lg">MENU</a>
+      </div>
     </div>
   </section>
 
@@ -44,18 +51,24 @@
       <div id="events-container" class="row g-4">
         <!-- Events will be injected here by JS -->
       </div>
+      <div class="d-flex gap-3 justify-content-center">
+        <a href="https://www.tickeri.com/venues/54aae1f5e7fbb67858965ec4" class="btn btn-primary btn-lg" target="_blank">VIEW ALL EVENTS</a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-4">
-    <p>&copy; 2025 The Palace Nightclub | Follow us on
-      <a href="#" class="text-white">Instagram</a> | 
-      <a href="#" class="text-white">Facebook</a>
+    <p>&copy; 2025 The Palace Nightclub | 13989 Jefferson Davis Highway, Woodbridge, VA | 703-490-3814</p>
+    <p>Follow us on
+      <a href="https://www.instagram.com/the_palace_official" target="_blank">Instagram</a> | 
+      <a href="https://www.facebook.com/palaceva" target="_blank">Facebook</a> |
+      <a href="https://www.tiktok.com/@the.palace.va" target="_blank">TikTok</a>
     </p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="main.js"></script>
+
 </body>
 </html>
