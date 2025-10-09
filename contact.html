@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -32,47 +33,51 @@
 <section class="py-5">
   <div class="container">
     <h2 class="text-center mb-5">Contact Us</h2>
-    <div class="row d-flex align-items-start">
+    <div class="row g-4">
       <!-- Contact Form -->
-      <div class="col-md-6 mb-3 d-flex">
-        <form action="#" class="p-3 border rounded w-100">
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" class="form-control">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" class="form-control">
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" class="form-control" rows="6"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Send Message</button>
-        </form>
+      <div class="col-md-6">
+        <div class="p-3 border rounded h-100">
+          <form action="#" id="contactForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" class="form-control" rows="6" required></textarea>
+            </div>
+            <button type="submit" id="sendMessageBtn" class="btn w-100">Send Message</button>
+          </form>
+        </div>
       </div>
 
       <!-- Address & Map -->
-<!-- Address & Map -->
-<div class="col-md-6 mb-3 d-flex flex-column">
-  <div class="map-container flex-grow-1">
-    <iframe
-      width="100%" 
-      height="100%" 
-      style="border:0;" 
-      loading="lazy" 
-      allowfullscreen
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAVSlFUcZ0vzL98K-WyPoa_IrewwnG3T08&q=13989+Jefferson+Davis+Highway+Woodbridge+VA">
-    </iframe>
-  </div>
-</div>
-
+      <div class="col-md-6">
+        <div class="map-container h-100">
+          <iframe
+            width="100%" 
+            height="100%" 
+            style="border:0; min-height: 440px;" 
+            loading="lazy" 
+            allowfullscreen
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAVSlFUcZ0vzL98K-WyPoa_IrewwnG3T08&q=13989+Jefferson+Davis+Highway+Woodbridge+VA">
+          </iframe>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-
+<section class="py-5 text-center">
+  <div class="container">
+    <h3><i class="fas fa-phone"></i> GIVE US A CALL!</h3>
+    <p class="lead">703-490-3814</p>
+  </div>
+</section>
 
   <footer class="bg-dark text-white text-center py-4">
     <p>&copy; 2025 The Palace Nightclub | 13989 Jefferson Davis Highway, Woodbridge, VA | 703-490-3814</p>
@@ -82,5 +87,28 @@
       <a href="https://www.tiktok.com/@the.palace.va" target="_blank">TikTok</a>
     </p>
   </footer>
+
+  <script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the actual form submission
+
+    const submitButton = document.getElementById('sendMessageBtn');
+    
+    // Change button to green and show success message
+    submitButton.style.backgroundColor = '#28a745'; // Bootstrap success green
+    submitButton.style.borderColor = '#28a745';
+    submitButton.innerText = 'SUCCESS!';
+    submitButton.disabled = true;
+
+    // Optional: Reset the form after a delay
+    setTimeout(() => {
+      document.getElementById('contactForm').reset();
+      submitButton.style.backgroundColor = ''; // Revert to original color from CSS
+      submitButton.style.borderColor = '';
+      submitButton.innerText = 'Send Message';
+      submitButton.disabled = false;
+    }, 3000); // Reset after 3 seconds
+  });
+</script>
 </body>
 </html>
