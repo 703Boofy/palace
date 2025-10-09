@@ -130,6 +130,21 @@ a {
   color: #d22222;
 }
 
+#events .card-title a {
+  color: #d22222;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#events .card-title a:hover {
+  color: #fff;
+}
+
+#events .card-img-top {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 #events .card-text {
   color: #ccc;
 }
@@ -150,6 +165,33 @@ a {
 
 #events .btn-primary:hover {
   background: #e04444;
+}
+
+#events .btn-sm {
+  background-color: #d22222;
+  border-color: #d22222;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+}
+
+#events .btn-sm:hover {
+  background-color: #e04444;
+  border-color: #e04444;
+}
+
+.btn-view-all {
+  background-color: #343a40; /* dark grey */
+  color: #fff; /* white text */
+  border: 2px solid #fff; /* white outline */
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.btn-view-all:hover {
+  background-color: #fff;
+  color: #343a40;
+  border-color: #fff;
 }
 
 /* Menu & Bottle Service Cards */
