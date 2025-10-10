@@ -275,3 +275,25 @@ form {
 #sendMessageBtn:hover {
   background-color: #e04444;
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    max-width: 100%;
+    border-radius: 0;
+    padding: 0 15px; /* Add some padding */
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .hero .d-flex.gap-3 {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+}
